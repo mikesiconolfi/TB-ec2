@@ -31,7 +31,7 @@ resource "aws_instance" "nginx" {
     user        = "ubuntu"
     password    = ""
     host        = aws_instance.nginx.public_ip
-    private_key = file("~/.ssh/msiconolfi-aws.pem")
+    private_key = file("privatekey.pem")
   }
   tags = {
     Name        = "nginx"
@@ -71,7 +71,7 @@ resource "aws_instance" "app1" {
     user        = "ubuntu"
     password    = ""
     host        = aws_instance.app1.public_ip
-    private_key = file("~/.ssh/msiconolfi-aws.pem")
+    private_key = file("privatekey.pem")
   }
   tags = {
     Name        = "app1"
@@ -110,7 +110,7 @@ resource "aws_instance" "app2" {
     user        = "ubuntu"
     password    = ""
     host        = aws_instance.app2.public_ip
-    private_key = file("~/.ssh/msiconolfi-aws.pem")
+    private_key = file("privatekey.pem")
   }
   tags = {
     Name        = "app2"
